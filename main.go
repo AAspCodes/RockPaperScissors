@@ -41,43 +41,32 @@ func gameLoop(){
 	var compMove string
 	
 	switch rand.Intn(3){
-	case 0:
-		compMove = "r"
-	case 1:
-		compMove = "p"
-	case 2:
-		compMove = "s"
+	case 0: compMove = "r"
+	case 1: compMove = "p"
+	case 2: compMove = "s"
 	}
+
 	fmt.Println("The Computer Played", compMove)
 	
 	var output string
 
 	if playerMove == "r"{
 		switch compMove{
-		case "r":
-			output = draw
-		case "p":
-			output = lose
-		case "s":
-			output = win
+		case "r": output = draw
+		case "p": output = lose
+		case "s": output = win
 		}
 	} else if playerMove == "p"{
 		switch compMove{
-		case "r":
-			output = win
-		case "p":
-			output = draw
-		case "s":
-			output = lose
+		case "r": output = win
+		case "p": output = draw
+		case "s": output = lose
 		}
 	} else {
 		switch compMove{
-		case "r":
-			output = lose
-		case "p":
-			output = win
-		case "s":
-			output = draw
+		case "r": output = lose
+		case "p": output = win
+		case "s": output = draw
 		}
 	}
 	fmt.Println(output)
