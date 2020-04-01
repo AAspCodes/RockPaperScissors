@@ -16,7 +16,7 @@ const (
 
 func main(){
 	keepPlaying := true
-	for keepPlaying{
+	for keepPlaying {
 		gameLoop()
 		
 		fmt.Print("Do you want to play again? (y/n): ")
@@ -25,7 +25,7 @@ func main(){
 
 		if answer == "y" {
 			keepPlaying = true
-		}else {
+		} else {
 			keepPlaying = false
 		}
 	}
